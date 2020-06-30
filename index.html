@@ -1,0 +1,89 @@
+<!--
+  >> https://vk.com/r1233
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Голосование за поправки в конституции РФ от 2020 года.</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            background: #fff;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 20px 30px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button:hover {
+            background: #f2f2f2;
+        }
+
+        .buttons {
+            border: 3px solid #000;
+            max-width: 320px;
+            padding: 30px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .vote {
+            text-align: left;
+        }
+
+        .status, .agree-ask {
+            font-size: 22px;
+        }
+
+        .no-text {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="buttons">
+    <p class="agree-ask">Согласны ли Вы на внесение поправок в конституцию РФ?</p>
+    <br>
+    <button class="btn-yes">Согласен</button>
+    <button class="btn-no">Против</button>
+    <br><br>
+    <hr>
+    <div>
+        <p class="status">Статистика голосования:</p>
+        <ul class="vote">
+            <li>Согласны: 100% проголосовавших</li>
+            <li>Против: 0% проголосовавших</li>
+        </ul>
+        <small class="no-text">
+            * Носителем суверенитета и единственным источником власти в РФ является ее многонациональный народ!
+        </small>
+    </div>
+</div>
+<script>
+    document.querySelector('.btn-no').addEventListener('mouseenter', (e) => {
+        e.target.style.position = 'absolute';
+        e.target.style.left = Math.floor(Math.random() * Math.floor(window.innerWidth - 120)) + 'px';
+        e.target.style.top = Math.floor(Math.random() * Math.floor(window.innerHeight - 60)) + 'px';
+    });
+
+    document.querySelectorAll('button').forEach(el => {
+        el.addEventListener('click', () => {
+            alert('Спасибо, что проголосовали ЗА!')
+        });
+    });
+</script>
+</body>
+</html>
